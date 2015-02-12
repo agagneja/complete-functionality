@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="455dp"
+        android:layout_weight="0.88">
+        <Button android:text="Send"
+            android:id="@+id/sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/chat_msg"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+        </Button>
+        <EditText android:id="@+id/chat_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </EditText>
+        <!--added this button -->
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:id="@+id/sendMoney"
+            android:layout_above="@+id/sendbtn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"></Button>
+           <!-- android:onClick="startPayment"-->
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_alignTop="@+id/sendMoney"
+
+            android:layout_above="@+id/sendbtn"
+            android:layout_toLeftOf="@+id/sendMoney"
+            android:layout_toStartOf="@+id/sendMoney" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="600px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/sendMoney">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tab" />
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$"
+            android:id="@+id/create_request"
+            android:layout_above="@+id/sendMoney"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</LinearLayout>
